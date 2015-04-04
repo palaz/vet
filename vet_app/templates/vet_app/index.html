@@ -1,0 +1,187 @@
+{% extends 'vet_app/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+    <div class="ui clearing divider margin-reset"></div>
+
+    <div class="ui stackable padded grid">
+        <div class="carousel middle aligned black row">
+            <div class="two wide column"></div>
+
+            <div class="six wide center aligned column">
+                <div class="ui center aligned grid">
+                    <div class="computer tablet only one column row"></div>
+                    <div class="one column row">
+                        <div class="column">
+                            <img class="ui centered big image" src="{% static "vet_app/images/logo2.png" %}" />
+                        </div>
+                    </div>
+
+                    <div class="three column row">
+                        <div class="three wide column">
+                            <img class="main ui centered tiny circular image" src="{% static "vet_app/images/home/01.jpg" %}"/>
+                        </div>
+                        <div class="three wide column">
+                            <img class="main ui centered tiny circular image" src="{% static "vet_app/images/home/02.jpg" %}"/>
+                        </div>
+                        <div class="three wide column">
+                            <img class="main ui centered tiny circular image" src="{% static "vet_app/images/home/03.jpg" %}"/>
+                        </div>
+                    </div>
+
+                    <div class="one column row">
+                        <div class="column">
+                            <div class="ui divider margin-reset"></div>
+                            <h3 class="ui blue inverted header">
+                                <div class="content">
+                                    <i class="blue inverted large animated call icon"></i>
+                                    Tel: 071 9710453 - Urgenze: +39 348 7855374
+                                    <div class="sub header">Via Vittorio Bachelet, 11, 60027 Osimo, AN</div>
+                                </div>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="computer tablet only one column row"></div>
+                </div>
+            </div>
+
+            <div class="five wide column">
+                <div class="ui center aligned grid">
+                    <div class="row"></div>
+
+                    <div class="one column row">
+                        <div class="column">
+                            <div class="ui inverted segment">
+                                <div class="ui auto shape">
+                                    <div class="sides">
+                                        <div class="active side">
+                                            <img class="ui rounded centered large image" src="{% static "vet_app/images/home/slide1.jpg" %}" />
+                                        </div>
+                                        <div class="side">
+                                            <img class="ui rounded centered large image" src="{% static "vet_app/images/home/slide2.jpg" %}" />
+                                        </div>
+                                        <div class="side">
+                                            <img class="ui rounded centered large image" src="{% static "vet_app/images/home/slide3.jpg" %}" />
+                                        </div>
+                                        <div class="side">
+                                            <img class="ui rounded centered large image" src="{% static "vet_app/images/home/slide4.jpg" %}" />
+                                        </div>
+                                        <div class="side">
+                                            <img class="ui rounded centered large image" src="{% static "vet_app/images/home/slide5.jpg" %}" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>
+                                <div class="ui circular inverted black tiny icon left-side button">
+                                    <i class="left arrow icon"></i>
+                                </div>
+                                <div class="ui circular inverted black white tiny icon right-side button">
+                                    <i class="right arrow icon"></i>
+                                </div>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui clearing divider margin-reset"></div>
+
+    <div class="ui padded three column stackable center aligned page grid">
+
+            <div class="column">
+                <div class="ui blue raised segment">
+                    <a class="ui fluid main button" href="{% url "vet_app:staff" %}">
+                        <h2 class="ui blue icon header">
+                            <i class="doctor icon"></i>
+                            <div class="content">
+                                Chi siamo
+                                <div class="sub header"><br />La nostra missione è la salute e il benessere del paziente, così allo stesso tempo la soddisfazione del proprietario.</div>
+                            </div>
+                        </h2>
+                    </a>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="ui blue raised segment">
+                    <a class="ui fluid main button" href="{% url "vet_app:struttura" %}">
+                        <h2 class="ui blue icon header">
+                            <i class="hospital icon"></i>
+                            <div class="content">
+                                La Clinica
+                                <div class="sub header"><br />La Clinica offre il servizio laboratoristico, di diagnostica per immagini, chirurgico e di ricovero e degenza.</div>
+                            </div>
+                        </h2>
+                    </a>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="ui blue raised segment">
+                    <a class="ui fluid main toggle button">
+                        <h2 class="ui blue icon header">
+                            <i class="paw icon"></i>
+                            <div class="content">
+                                Consigli Vet
+                            </div>
+                            <div class="sub header"><br />Siamo lieti di prenderci cura dei tuoi amici animali.</div>
+                        </h2>
+                        <p>
+                            <img class="ui avatar image" src="{% static "vet_app/images/home/01.jpg" %}"/>
+                            <img class="ui avatar image" src="{% static "vet_app/images/home/02.jpg" %}"/>
+                            <img class="ui avatar image" src="{% static "vet_app/images/home/03.jpg" %}"/>
+                        </p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="ui blue raised segment">
+                    <a class="ui fluid main button" href="{% url "vet_app:category" slug="dove-siamo" %}">
+                        <h2 class="ui blue icon header">
+                            <i class="marker icon"></i>
+                            <div class="content">
+                                Dove Siamo
+                                <div class="sub header"><br />Dopo varie esperienze lavorative-formative in giro per l'Italia, abbiamo trovato la nostra casa professionale in Osimo nella località di Campocavallo.</div>
+                            </div>
+                        </h2>
+                    </a>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="ui blue raised segment">
+                    <a class="ui fluid main button" href="https://it-it.facebook.com/pages/Clinica-Veterinaria-Valmusone-Dr-Pesaresi-Ciavattini-Gianfelici/121444544701071">
+                        <h2 class="ui blue icon header">
+                            <i class="facebook icon"></i>
+                            <div class="content">
+                                Social
+                                <div class="sub header"><br />Rimani in contatto con noi.<br />Seguici sulla nostra pagina facebook!</div>
+                            </div>
+                        </h2>
+                    </a>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="ui blue raised segment">
+                    <a class="ui fluid main toggle button">
+                        <h2 class="ui blue icon header">
+                            <i class="call icon"></i>
+                            <div class="content">
+                                Contattaci
+                            </div>
+                            <div class="sub header"><br />Scopri come contattarci.<br />Chiama ai nostri numeri, anche per urgenze, oppure mandaci un'email.</div>
+                        </h2>
+                    </a>
+                </div>
+            </div>
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'vet_app/base.html' %}
+
+{% block content %}
+
+    <div class="ui clearing divider blue margin-reset"></div>
+
+    <div class="ui padded grid">
+
+        <div class="middle aligned black row">
+            <div class="computer tablet only three wide column"></div>
+
+            <div class="ten wide column">
+
+                {% block breadcrumb%}
+                    <div class="ui breadcrumb">
+                        <a class="section" href="{% url 'vet_app:home' %}">Home</a>
+                        {% if page.name != page.category.name %}
+                            <i class="right chevron white icon divider"></i>
+                            <div class="section">{{ page.category.name }}</div>
+                        {% endif %}
+                        <i class="right chevron white icon divider"></i>
+                        <div class="active section">{{ page.name }}</div>
+                    </div>
+
+                    <h1 class="ui blue header margin-reset">{{ page.name }}</h1>
+                {% endblock %}
+
+            </div>
+
+            <div class="right aligned mobile only six wide column">
+                <a class="ui{% if menu != 'home' %} pulse-logo{% endif %} toggle blue content icon button"><i class="treatment icon"></i></a>
+
+            </div>
+
+        </div>
+
+        <div class="ui clearing divider blue margin-reset"></div>
+
+    </div>
+
+    {% block page_content %} {% endblock %}
+
+{% endblock %}

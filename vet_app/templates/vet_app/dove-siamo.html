@@ -1,0 +1,46 @@
+{% extends 'vet_app/base_page.html' %}
+
+{% block breadcrumb %}
+    <div class="ui breadcrumb">
+        <a class="section" href="{% url 'vet_app:home' %}">Home</a>
+        <i class="right chevron white icon divider"></i>
+        <div class="active section">Dove Siamo</div>
+    </div>
+    <h1 class="ui blue header margin-reset">Dove Siamo</h1>
+{% endblock %}
+
+
+{% block page_content %}
+
+    <div class="ui clearing divider blue margin-reset"></div>
+
+    <div class="ui stackable padded grid">
+
+        <div class="row">
+            <div class="three wide column"></div>
+
+            <div class="ten wide column"  id="sticky-menu">
+                <article>
+                    <h3 class="ui blue top attached header">Dove Siamo</h3>
+                    <div class="ui blue attached raised segment">
+                        <p>
+                        <div class="fluidMedia">
+                            <iframe style="border: 0;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5792.0133343060725!2d13.493508!3d43.460457999999996!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x15c2cc5f059b3535!2sClinica+Veterinaria+Valmusone+-+Osimo!5e0!3m2!1sit!2sit!4v1416680950890" frameborder="0" width="600" height="450"></iframe>
+                        </div>
+                        </p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="right aligned computer tablet only three wide column">
+                <div class="ui sticky">
+                    <a class="ui{% if menu != 'home' %} pulse-logo{% endif %} large toggle blue content icon button"><i class="treatment icon"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+{% endblock %}

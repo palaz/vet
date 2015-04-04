@@ -1,0 +1,92 @@
+{% extends 'vet_app/base_page.html' %}
+{% load staticfiles %}
+
+{% block breadcrumb %}
+    <div class="ui breadcrumb">
+        <a class="section" href="{% url 'vet_app:home' %}">Home</a>
+        <i class="right chevron white icon divider"></i>
+        <div class="active section">Struttura</div>
+    </div>
+    <h1 class="ui blue header margin-reset">Struttura</h1>
+{% endblock %}
+
+{% block page_content %}
+
+    <div class="ui padded stackable grid">
+
+        <div class="row">
+            <div class="three wide column"></div>
+
+            <div class="ten wide center aligned column">
+                <div class="ui huge blue message">
+                    <p>Il concetto strutturale dell'associazione è offrire tramite professionalità e competenza un servizio
+                        che sfrutti l'energia, la disponibilità dello staff, il quale dopo varie esperienze
+                        lavorative-formative in giro per l'Italia ha trovato la sua casa professionale in Osimo nella
+                        località di Campocavallo</p>
+                </div>
+            </div>
+
+            <div class="right aligned computer tablet only three wide column">
+                <div class="ui sticky">
+                    <a class="ui{% if menu != 'home' %} pulse-logo{% endif %} large toggle blue content icon button"><i class="treatment icon"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="one column center aligned row margin-reset padding-reset">
+            <div class="ten wide column">
+                   <div class="ui divider"></div>
+            </div>
+        </div>
+
+        <div class="middle aligned row">
+            <div class="three wide column"></div>
+
+            <div class="six wide column">
+
+                <div class="ui basic segment">
+                <h1 class="ui blue header">La Clinica</h1>
+
+                    <h3 class="ui header">
+                        La Clinica offre il servizio laboratoristico, di diagnostica per immagini, chirurgico e di ricovero e
+                        degenza riuscendo a coprire tutte le esigenze dei pazienti.
+                        Offre il servizio di reperibilità 24h, 365 giorni all'anno.
+                    </h3>
+                    <h3 class="ui header">
+                        Per lo Staff il concetto di Clinica è rivisto dall'abituale idea di centro sanitario fine a se stesso,
+                        oltre ad avere a cuore la salute dei nostri amici animali la Clinica ha già svolto e svolgerà un
+                        compito anche sociale organizzando eventi che possano offrire alla popolazione momenti di piacevole svago approfondendo tematiche di interesse sanitario e sociale.
+                    </h3>
+                </div>
+
+
+            </div>
+
+            <div class="four wide center aligned column">
+
+                <div class="ui blue segment">
+
+                    <h3 class="ui blue header">
+                        <i class="small photo icon"></i>
+                        Galleria Fotografica
+                    </h3>
+
+                    <div class="ui doubling three column grid">
+                        {% for count in "123456789" %}
+                            <div class="column">
+                                <a class="image-popup-no-margins" href="{% static "vet_app/images/struttura/"|add:count|add:".jpg" %}" title="Clinica Veterinaria Valmusone">
+                                    <img class="ui centered rounded image flip-img" src="{% static "vet_app/images/struttura/"|add:count|add:"_small.jpg" %}">
+                                </a>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row"></div>
+    </div>
+
+{% endblock %}

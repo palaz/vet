@@ -1,0 +1,112 @@
+{% extends 'vet_app/base_page.html' %}
+{% load staticfiles %}
+
+{% block breadcrumb %}
+    <div class="ui breadcrumb">
+        <a class="section" href="{% url 'vet_app:home' %}">Home</a>
+        <i class="right chevron white icon divider"></i>
+        <div class="active section">Staff</div>
+    </div>
+    <h1 class="ui blue header margin-reset">Staff</h1>
+{% endblock %}
+
+{% block page_content %}
+
+    <div class="ui stackable padded grid">
+
+        <div class="row">
+            <div class="three wide column"></div>
+
+            <div class="ten wide center aligned column">
+                <div class="ui huge blue message">
+                    La nostra missione è la salute e il benessere del paziente, così allo stesso tempo la soddisfazione del proprietario.
+                </div>
+            </div>
+
+            <div class="right aligned computer tablet only three wide column">
+                <div class="ui sticky">
+                    <a class="ui{% if menu != 'home' %} pulse-logo{% endif %} large toggle blue content icon button"><i class="treatment icon"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="one column center aligned row margin-reset padding-reset">
+            <div class="ten wide column">
+                <div class="ui divider"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="computer tablet only three wide column"></div>
+
+            <div class="ten wide column">
+
+                <div class="ui three cards">
+
+                    <div class="card">
+                        <div class="image ani-card" data-content="Portateci.." data-variation="large">
+                            <div class="ui large right corner label">
+                                <i class="doctor blue icon"></i>
+                            </div>
+                            <img src="{% static "vet_app/images/staff1_small.jpg" %}">
+                        </div>
+                        <div class="content">
+                            <div class="header">
+                                <a class="header">Jacopo Gianfelici</a>
+                            </div>
+                            <div class="description">
+                                <p>Laureato presso l'Università di Camerino.</p>
+                                <p>E' socio SCIVAC e frequenta seminari e corsi di aggiornamento in ecografia, anestesiologia,
+                                    e medicina di urgenza presso la sede di Cremona.</p>
+                                <p>Una delle sue più grandi passioni è la musica che coltiva nel tempo libero.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="image ani-card" data-content="..i vostri.." data-variation="large">
+                            <div class="ui large right corner label">
+                                <i class="doctor blue icon"></i>
+                            </div>
+                            <img src="{% static "vet_app/images/staff2_small.jpg" %}">
+                        </div>
+                        <div class="content">
+                            <div class="header">
+                                <a class="header">Daniele Pesaresi</a>
+                            </div>
+                            <div class="description">
+                                <p>Laureato presso l'Università di Perugia.</p>
+                                <p>E' socio SCIVAC e frequenta seminari e corsi di aggiornamento in chirurgia generale e ortopedia presso la sede di Cremona.</p>
+                                <p>Nel tempo libero ama viaggiare.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="image ani-card" data-content="..fedeli amici!" data-variation="large">
+                            <div class="ui large right corner label">
+                                <i class="pink doctor blue icon"></i>
+                            </div>
+                            <img src="{% static "vet_app/images/staff3_small.jpg" %}">
+                        </div>
+                        <div class="content">
+                            <div class="header">
+                                <a class="header">Michela Ciavattini</a>
+                            </div>
+                            <div class="description">
+                                <p>Laureata presso l'Università di Camerino.</p>
+                                <p>E' socio SCIVAC e frequenta seminari e corsi di aggiornamento in dermatologia e medicina interna presso la sede di Cremona.</P>
+                                <p>Nel tempo libero si dedica ai suoi Golden Retriever allevandoli amorevolmente.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+{% endblock %}

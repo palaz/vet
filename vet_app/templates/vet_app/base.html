@@ -1,0 +1,172 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head lang="it">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="{% block description %}Clinica Veterinaria Valmusone di Osimo{% endblock %}"/>
+    <meta name="keywords" content="{% block keywords %}clinica, veterinario, animali, valmusone, osimo, campocavallo{% endblock %}"/>
+    <meta name="author" content="Luca Palazzo"/>
+    <title>{% block title %}Clinica Veteriaria Valmusone{% endblock %}</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="{% static "vet_app/dist/semantic.min.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "vet_app/slick/slick.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "vet_app/css/magnific-popup.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "vet_app/css/vet.css" %}">
+</head>
+<body>
+
+
+<div class="ui blue fixed labeled icon main menu">
+    <a class="{% if menu == 'home' %}active {% endif %}item" href="{% url 'vet_app:home' %}"><i class="home icon"></i>Home</a>
+    <a class="{% if menu == 'staff' %}active {% endif %}item" href="{% url 'vet_app:staff' %}"><i class="doctor icon"></i>Staff</a>
+    <a class="{% if menu == 'struttura' %}active {% endif %}item" href="{% url 'vet_app:struttura' %}"><i class="hospital icon"></i>Struttura</a>
+    <a class="{% if menu == 'dove-siamo' %}active {% endif %}item" href="{% url 'vet_app:dove-siamo' %}"><i class="marker icon"></i>Dove Siamo</a>
+    <a class="{% if menu == 'contatti' %}active {% endif %}item" href="{% url 'vet_app:contatti' %}"><i class="call icon"></i>Contatti</a>
+</div>
+
+
+<div class="pusher full-page">
+
+    <header class="ui padded page grid">
+
+        <div class="white tablet computer only row middle aligned">
+            <div class="four wide column">
+                <a href="{% url 'vet_app:home' %}">
+                    <img class="ui image{% if menu == 'home' %} ani-logo{% endif %}" src="{% static "vet_app/images/logo.png" %}" />
+                </a>
+            </div>
+            <div class="right aligned twelve wide column">
+                <div class="ui large text blue menu">
+                    <a class="{% if menu == 'home' %}active {% endif %}item" href="{% url 'vet_app:home' %}"><i class="home icon"></i>Home</a>
+                    <a class="{% if menu == 'staff' %}active {% endif %}item" href="{% url 'vet_app:staff' %}"><i class="doctor icon"></i>Staff</a>
+                    <a class="{% if menu == 'struttura' %}active {% endif %}item" href="{% url 'vet_app:struttura' %}"><i class="hospital icon"></i>Struttura</a>
+                    <a class="{% if menu == 'dove-siamo' %}active {% endif %}item" href="{% url 'vet_app:dove-siamo' %}"><i class="marker icon"></i>Dove Siamo</a>
+                    <a class="{% if menu == 'contatti' %}active {% endif %}item" href="{% url 'vet_app:contatti' %}"><i class="call icon"></i>Contatti</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="white mobile only row middle aligned">
+            <div class="ten wide column">
+                <div class="ui blue icon top left pointing dropdown button">
+                    <i class="content icon"></i>
+                    <div class="ui vertical blue menu">
+                        <a class="{% if menu == 'home' %}active {% endif %}item" href="{% url 'vet_app:home' %}"><i class="home icon"></i>Home</a>
+                        <a class="{% if menu == 'staff' %}active {% endif %}item" href="{% url 'vet_app:staff' %}"><i class="doctor icon"></i>Staff</a>
+                        <a class="{% if menu == 'struttura' %}active {% endif %}item" href="{% url 'vet_app:struttura' %}"><i class="hospital icon"></i>Struttura</a>
+                        <a class="{% if menu == 'dove-siamo' %}active {% endif %}item" href="{% url 'vet_app:dove-siamo' %}"><i class="marker icon"></i>Dove Siamo</a>
+                        <a class="{% if menu == 'contatti' %}active {% endif %}item" href="{% url 'vet_app:contatti' %}"><i class="call icon"></i>Contatti</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right aligned six wide column">
+                <a href="{% url 'vet_app:home' %}">
+                    <img class="ui right floated small image{% if menu == 'home' %} ani-logo{% endif %}" src="{% static "vet_app/images/logo.png" %}" />
+                </a>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <div class="page-content">
+
+        {% block content %}{% endblock %}
+
+    </div>
+
+
+    <footer class="ui padded grid">
+        <div class="ui clearing divider blue margin-reset"></div>
+
+        <div class="computer only black middle aligned row">
+            <div class="three wide column"></div>
+
+            <div class="three wide column">
+                <h3 class="tel-contact ui inverted header">
+                    <i class="blue animated call icon"></i>
+                    <div class="content">Tel: 071 971 0453
+                        <div class="sub header">Urgenze: +39 348 7855374</div>
+                    </div>
+                </h3>
+            </div>
+
+            <div class="four wide center aligned column">
+                <div class="ui basic segment">
+                    <div class="ui small blue header margin-reset">Clinica Veterinaria Valmusone di Osimo</div>
+                    Via Vittorio Bachelet, 11, 60027 Osimo, AN<br />
+                    Partita Iva: 02655230429
+                </div>
+            </div>
+
+            <div class="right aligned three wide column">
+                <a class="flip-logo ui big circular facebook icon button" href="https://it-it.facebook.com/pages/Clinica-Veterinaria-Valmusone-Dr-Pesaresi-Ciavattini-Gianfelici/121444544701071">
+                    <i class="facebook icon"></i>
+                </a>
+                <a class="flip-logo ui big circular youtube icon button" href="https://plus.google.com/106102130869695932992/about">
+                    <i class="google plus icon"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="mobile tablet only black center aligned one column row">
+            <div class="column">
+                <div class="ui basic segment">
+                    <div class="ui small blue header margin-reset">Clinica Veterinaria Valmusone di Osimo</div>
+                    Via Vittorio Bachelet, 11, 60027 Osimo, AN<br />
+                    Partita Iva: 02655230429
+                </div>
+            </div>
+        </div>
+
+        <div class="mobile tablet only black center aligned one column row">
+            <div class="column">
+                <a class="flip-logo ui big circular facebook icon button" href="https://it-it.facebook.com/pages/Clinica-Veterinaria-Valmusone-Dr-Pesaresi-Ciavattini-Gianfelici/121444544701071">
+                    <i class="facebook icon"></i>
+                </a>
+                <a class="flip-logo ui big circular youtube icon button" href="https://plus.google.com/106102130869695932992/about">
+                    <i class="google plus icon"></i>
+                </a>
+            </div>
+        </div>
+
+    </footer>
+
+</div>
+
+<aside class="ui right vertical inverted blue sidebar accordion menu">
+
+    <h3 class="header item">Servizi e Attività</h3>
+
+    {% for category in categories %}
+        {% if category.is_section %}
+            <section class="item">
+                <div class="title"><i class="dropdown icon"></i>{{ category.name }}</div>
+                <div class="{% if category.slug == menu %}active {% endif %}content">
+                    {% for page1 in category.page_set.all|dictsort:'name' %}
+                        <a class="{% if page1.slug == page.slug %}active {% endif %}item" href="{% url 'vet_app:page' cat=category.slug slug=page1.slug %}">{{ page1.name }}</a>
+                    {% endfor %}
+                </div>
+            </section>
+        {% endif %}
+    {% endfor %}
+
+</aside>
+
+
+
+
+
+<script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="{% static "vet_app/dist/semantic.min.js" %}"></script>
+<script type="text/javascript" src="{% static "vet_app/js/magn_pupup.js" %}"></script>
+<script type="text/javascript" src="{% static "vet_app/js/jquery.waypoints.min.js" %}"></script>
+<script type="text/javascript" src="{% static "vet_app/js/inview.min.js" %}"></script>
+<script type="text/javascript" src="{% static "vet_app/js/vet.js" %}"></script>
+</body>
+</html>
