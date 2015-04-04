@@ -18,7 +18,7 @@
 <body>
 
 
-<div class="ui blue fixed fluid five item main menu">
+<div class="ui blue fixed fluid five item large main menu">
     <a class="{% if menu == 'home' %}active {% endif %}item" href="{% url 'vet_app:home' %}"><i class="home icon"></i>Home</a>
     <a class="{% if menu == 'staff' %}active {% endif %}item" href="{% url 'vet_app:staff' %}"><i class="doctor icon"></i>Staff</a>
     <a class="{% if menu == 'struttura' %}active {% endif %}item" href="{% url 'vet_app:struttura' %}"><i class="hospital icon"></i>Struttura</a>
@@ -140,7 +140,7 @@
 
 <aside class="ui right vertical inverted blue sidebar accordion menu">
 
-    <h3 class="header item">Servizi e Attività</h3>
+    <h3 class="header item">Consigli Vet</h3>
 
     {% for category in categories %}
         {% if category.is_section %}
