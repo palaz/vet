@@ -129,8 +129,8 @@ $(document).ready(function() {
     $('.servizio')
         .transition({
             animation : 'tada',
-            duration  : '750',
-            interval  : '150'
+            duration  : '1000',
+            interval  : '250'
         })
     ;
 
