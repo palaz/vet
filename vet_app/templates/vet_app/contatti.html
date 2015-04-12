@@ -1,5 +1,6 @@
 {% extends 'vet_app/base_page.html' %}
 
+
 {% block breadcrumb %}
     <div class="ui breadcrumb">
         <a class="section" href="{% url 'vet_app:home' %}">Home</a>
@@ -7,4 +8,9 @@
         <div class="active section">Contatti</div>
     </div>
     <h1 class="ui blue header margin-reset">Contatti</h1>
+{% endblock %}
+
+
+{% block page_content %}
+
 {% endblock %}

@@ -73,3 +73,12 @@ class ContattiView(IndexView):
         context = super().get_context_data(**kwargs)
         context['menu'] = 'contatti'
         return context
+
+
+class ServiziView(IndexView):
+    template_name = 'vet_app/servizi.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['menu'] = 'servizi'
+        return context

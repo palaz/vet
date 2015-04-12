@@ -55,15 +55,6 @@ $(document).ready(function() {
         .sidebar('attach events', '.toggle')
     ;
 
-
-    $('.ui.sticky')
-        .sticky({
-            context: '#sticky-menu',
-            offset: 70
-        })
-    ;
-
-
     $('.ani-card')
         .css("visibility", "visible")
         .transition({
@@ -74,7 +65,7 @@ $(document).ready(function() {
 
     $('.ani-logo')
         .transition({
-            animation: 'tada',
+            animation: 'jiggle',
             duration: '1250ms'
         })
     ;
@@ -132,6 +123,14 @@ $(document).ready(function() {
     $('.ani-card')
         .popup({
             position: 'top center'
+        })
+    ;
+
+    $('.bounce.image')
+        .transition({
+            animation : 'bounce',
+            duration  : '750',
+            interval  : '150'
         })
     ;
 

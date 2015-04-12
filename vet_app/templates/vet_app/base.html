@@ -22,8 +22,8 @@
     <a class="{% if menu == 'home' %}active {% endif %}item" href="{% url 'vet_app:home' %}"><i class="home icon"></i>Home</a>
     <a class="{% if menu == 'staff' %}active {% endif %}item" href="{% url 'vet_app:staff' %}"><i class="doctor icon"></i>Staff</a>
     <a class="{% if menu == 'struttura' %}active {% endif %}item" href="{% url 'vet_app:struttura' %}"><i class="hospital icon"></i>Struttura</a>
+    <a class="{% if menu == 'servizi' %}active {% endif %}item" href="{% url 'vet_app:servizi' %}"><i class="paw icon"></i>Servizi e Attività</a>
     <a class="{% if menu == 'dove-siamo' %}active {% endif %}item" href="{% url 'vet_app:dove-siamo' %}"><i class="marker icon"></i>Dove Siamo</a>
-    <a class="{% if menu == 'contatti' %}active {% endif %}item" href="{% url 'vet_app:contatti' %}"><i class="call icon"></i>Contatti</a>
 </div>
 
 
@@ -42,8 +42,8 @@
                     <a class="{% if menu == 'home' %}active {% endif %}item" href="{% url 'vet_app:home' %}"><i class="home icon"></i>Home</a>
                     <a class="{% if menu == 'staff' %}active {% endif %}item" href="{% url 'vet_app:staff' %}"><i class="doctor icon"></i>Staff</a>
                     <a class="{% if menu == 'struttura' %}active {% endif %}item" href="{% url 'vet_app:struttura' %}"><i class="hospital icon"></i>Struttura</a>
+                    <a class="{% if menu == 'servizi' %}active {% endif %}item" href="{% url 'vet_app:servizi' %}"><i class="paw icon"></i>Servizi e Attività</a>
                     <a class="{% if menu == 'dove-siamo' %}active {% endif %}item" href="{% url 'vet_app:dove-siamo' %}"><i class="marker icon"></i>Dove Siamo</a>
-                    <a class="{% if menu == 'contatti' %}active {% endif %}item" href="{% url 'vet_app:contatti' %}"><i class="call icon"></i>Contatti</a>
                 </div>
             </div>
         </div>
@@ -56,8 +56,8 @@
                         <a class="{% if menu == 'home' %}active {% endif %}item" href="{% url 'vet_app:home' %}"><i class="home icon"></i>Home</a>
                         <a class="{% if menu == 'staff' %}active {% endif %}item" href="{% url 'vet_app:staff' %}"><i class="doctor icon"></i>Staff</a>
                         <a class="{% if menu == 'struttura' %}active {% endif %}item" href="{% url 'vet_app:struttura' %}"><i class="hospital icon"></i>Struttura</a>
+                        <a class="{% if menu == 'servizi' %}active {% endif %}item" href="{% url 'vet_app:servizi' %}"><i class="paw icon"></i>Servizi e Attività</a>
                         <a class="{% if menu == 'dove-siamo' %}active {% endif %}item" href="{% url 'vet_app:dove-siamo' %}"><i class="marker icon"></i>Dove Siamo</a>
-                        <a class="{% if menu == 'contatti' %}active {% endif %}item" href="{% url 'vet_app:contatti' %}"><i class="call icon"></i>Contatti</a>
                     </div>
                 </div>
             </div>
@@ -67,7 +67,6 @@
                     <img class="ui right floated small image{% if menu == 'home' %} ani-logo{% endif %}" src="{% static "vet_app/images/logo.png" %}" />
                 </a>
             </div>
-
         </div>
 
     </header>
@@ -161,7 +160,7 @@
 
 
 
-<script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-2.1.3.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="{% static "vet_app/dist/semantic.min.js" %}"></script>
 <script type="text/javascript" src="{% static "vet_app/js/magn_pupup.js" %}"></script>
