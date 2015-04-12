@@ -66,7 +66,7 @@ $(document).ready(function() {
     $('.ani-logo')
         .transition({
             animation: 'jiggle',
-            duration: '1250ms'
+            duration: '1000ms'
         })
     ;
 
@@ -126,9 +126,9 @@ $(document).ready(function() {
         })
     ;
 
-    $('.bounce.image')
+    $('.servizio')
         .transition({
-            animation : 'bounce',
+            animation : 'tada',
             duration  : '750',
             interval  : '150'
         })
