@@ -18,7 +18,7 @@ class IndexView(ListView):
 
 class PageView(DetailView):
     model = Page
-    template_name = 'vet_app/page.html'
+    template_name = 'vet_app/articolo.html'
     context_object_name = 'page'
 
     def get_context_data(self, **kwargs):

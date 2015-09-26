@@ -1,6 +1,5 @@
 * {
     font-family: 'Champagne', 'Source Sans Pro', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-    /*margin: 0px;*/
 }
 
 @font-face {
@@ -14,10 +13,6 @@
 .margin-reset {
     margin: 0px !important;
 }
-
-/*img {*/
-    /*margin: 10px 0px;*/
-/*}*/
 
 img.align-center {
     display: block;
@@ -88,7 +83,6 @@ footer {
     height: 100%;
 }
 
-
 .full-page {
     background-color: #000000;
 }
@@ -127,8 +121,6 @@ a.main.button {
     max-width: 100%;
     max-height: 100%;
 }
-
-
 
 .mfp-no-margins img.mfp-img {
 	padding: 0;

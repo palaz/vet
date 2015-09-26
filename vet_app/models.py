@@ -6,7 +6,7 @@ from django.utils.text import slugify
 
 class Category(models.Model):
     name = models.CharField(max_length=50, verbose_name='Nome')
-    is_section = models.BooleanField(default=False, verbose_name='Consigli Vet')
+    is_vet = models.BooleanField(default=False, verbose_name='Consigli Vet')
     slug = models.SlugField(max_length=50, default='categoria')
 
     def __str__(self):

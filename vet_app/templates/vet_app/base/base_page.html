@@ -1,4 +1,4 @@
-{% extends 'vet_app/base.html' %}
+{% extends 'vet_app/base/base.html' %}
 
 {% block content %}
 
@@ -11,7 +11,7 @@
 
             <div class="ten wide column">
 
-                {% block breadcrumb%}
+                {% block breadcrumb %}
                     <div class="ui breadcrumb">
                         <a class="section" href="{% url 'vet_app:home' %}">Home</a>
                         {% if page.name != page.category.name %}

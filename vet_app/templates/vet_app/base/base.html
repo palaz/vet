@@ -1,11 +1,12 @@
 {% load staticfiles %}
 <!DOCTYPE html>
 <html>
+
 <head lang="it">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta name="description" content="{% block description %}Clinica Veterinaria Valmusone di Osimo{% endblock %}"/>
-    <meta name="keywords" content="{% block keywords %}clinica, veterinario, animali, valmusone, osimo, campocavallo{% endblock %}"/>
+    <meta name="keywords" content="{% block keywords %}clinica, veterinario, veterinario osimo, animali, cane, gatto, valmusone, osimo, campocavallo{% endblock %}"/>
     <meta name="author" content="Luca Palazzo"/>
     <title>{% block title %}Clinica Veteriaria Valmusone{% endblock %}</title>
 
@@ -16,8 +17,8 @@
     <link rel="stylesheet" type="text/css" href="{% static "vet_app/css/vet.css" %}">
     <link rel="icon" href="{% static "vet_app/images/favicon.png" %}">
 </head>
-<body>
 
+<body>
 
 <div class="ui blue fixed fluid five item large main menu">
     <a class="{% if menu == 'home' %}active {% endif %}item" href="{% url 'vet_app:home' %}"><i class="home icon"></i>Home</a>
@@ -26,7 +27,6 @@
     <a class="{% if menu == 'servizi' %}active {% endif %}item" href="{% url 'vet_app:servizi' %}"><i class="paw icon"></i>Servizi e Attività</a>
     <a class="{% if menu == 'dove-siamo' %}active {% endif %}item" href="{% url 'vet_app:dove-siamo' %}"><i class="marker icon"></i>Dove Siamo</a>
 </div>
-
 
 <div class="pusher full-page">
 
@@ -143,7 +143,7 @@
     <h3 class="header item">Consigli Vet</h3>
 
     {% for category in categories %}
-        {% if category.is_section %}
+        {% if category.is_vet %}
             <section class="item">
                 <div class="title"><i class="dropdown icon"></i>{{ category.name }}</div>
                 <div class="{% if category.slug == menu %}active {% endif %}content">
@@ -157,10 +157,6 @@
 
 </aside>
 
-
-
-
-
 <script type="text/javascript" src="//code.jquery.com/jquery-2.1.3.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="{% static "vet_app/dist/semantic.min.js" %}"></script>
@@ -168,5 +164,7 @@
 <script type="text/javascript" src="{% static "vet_app/js/jquery.waypoints.min.js" %}"></script>
 <script type="text/javascript" src="{% static "vet_app/js/inview.min.js" %}"></script>
 <script type="text/javascript" src="{% static "vet_app/js/vet.js" %}"></script>
+
 </body>
+
 </html>

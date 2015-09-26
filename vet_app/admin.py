@@ -12,9 +12,9 @@ class PageInLine(admin.StackedInline):
 class CategoryAdmin(admin.ModelAdmin):
     fieldsets = [
         ('Nome', {'fields': ['name']}),
-        ('Consigli Vet?', {'fields': ['is_section']}),
+        ('Sezione', {'fields': ['is_vet']}),
     ]
-    list_display = ('name', 'is_section', 'slug')
+    list_display = ('name', 'is_vet', 'slug')
     inlines = [PageInLine]
 
 
